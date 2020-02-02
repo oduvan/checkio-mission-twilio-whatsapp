@@ -8,10 +8,12 @@ requirejs(['ext_editor_io', 'jquery_190'],
         var io = new extIO({
             multipleArguments: true,
             functions: {
-                python: 'sum_two',
-                js: 'sumTwo'
+                python: 'send_message',
             }
         });
+        io.parseOutputArguments = function(val) {
+            return "Message from " + val.from_ + " to " + val.to +": \"" + val.body + '"';
+        }
         io.start();
     }
 );

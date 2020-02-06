@@ -42,10 +42,10 @@ def cover(func, in_data):
                 verification_payload,
                 account_sid=mock_message_create._solution['account_sid'],
             )
-        mock_message_create.side_effect = mock_message_create_side_effect
-
-        return func(*in_data)
-        mock_message_create.assert_called()    
+        mock_message_create.side_effect = mock_message_create_side_effect    
+        ret = func(*in_data)
+        mock_message_create.assert_called_once()
+        return mock_message_create.call_args[1]
 '''
 
 

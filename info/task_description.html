@@ -1,20 +1,20 @@
 <!-- Describe task in general -->
 
-<p>
-    Sum two passed ints
-</p>
+<p><i>
+    To solve this task you’ll need to create an account on Twilio (it's absolutely free) to get auth_token and account_sid. Here is a <a href="https://www.youtube.com/watch?v=TwN-nBFuOEg">short video</a> that will tell you how to do this. In addition, you’ll need to use the WhatsUp API from Twilio. You can <a href="https://www.twilio.com/docs/sms/whatsapp/quickstart">read more about this here</a>.
+</i></p>
 
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
-</p>
+<p>Oftentimes, when sending a message through WhatsUp, we don’t really bother starting a sentence with a capital letter and ending it with a period. We are in a hurry. But what if the program will correct this for you?</p>
+
+<p>Write a program that will send WhatsUp message with automatically corrected sentences that start with a capital letter, and end with a dot.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are ints.
+    <strong>Input: </strong> Three arguments, all strings: from number, to number and message line.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> None.
 </p>
 
 
@@ -24,29 +24,5 @@
         <strong>Example:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: python">send_message('whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi!')
 </pre>
-{% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
-</pre>
-{% endif %}
-</div>
-
-
-<!-- Here you can explain how it can be used in development -->
-<!-- The section is optional -->
-<p class="for_info_only">
-
-    <strong>How it’s used: </strong>
-    <i>(math is used everywhere)</i>
-</p>
-
-<!-- Here you can explain some constraints for input-->
-<!-- The section is optional -->
-<p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
-</p>

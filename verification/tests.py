@@ -11,8 +11,11 @@ TESTS = {
     "Basics": [
         {
             "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi'],
-            "answer": 'MMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-            "explanation": "3+2=?"
+            "answer": {
+                'body': 'Hi',
+                'from_': 'whatsapp:+15017122661',
+                'to': 'whatsapp:+15017122662'
+            }
         },
     ],
 }

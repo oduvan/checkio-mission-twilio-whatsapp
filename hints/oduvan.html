@@ -1,0 +1,70 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        To test how the mission works, you’ll have to create a free Twilio account and use WhatsUp API that it provides. More details in <a href="https://www.youtube.com/watch?v=TwN-nBFuOEg">this video</a>. Let's use <a href="https://www.twilio.com/docs/sms/whatsapp/quickstart">an example</a> from the documentation to send a message.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ok. And how to correct message?
+    </div>
+    <div class="answer">
+        A function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">str.upper</a></b> returns a copy of the string with all of the cased characters [4] converted to the uppercase. We need to convert only the first char, and in order to get it we should use text[0]
+<br />
+This can be a good start for you.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        How can I use it?
+    </div>
+    <div class="answer">
+
+        <pre class="brush: python">text = text[0].upper() + text[1:]</pre>
+
+This should work, try it out.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        But it still doesn’t solve the mission. What should I do next?
+    </div>
+    <div class="answer">
+        The next step for you is to check if the given string ends with a dot. You can use a function <b style="text-decoration: underline;"><a href="https://docs.python.org/3/library/stdtypes.html#str.endswith">str.endswith</a>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        How can I do it?
+    </div>
+    <div class="answer">
+<pre class="brush: python">If not text.endswith('.'):
+    text += '.'</pre>
+
+This expression checks whether the text in a variable text ends with a dot, and if it doesn’t then add a dot at the end.
+        
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Can you help me to put it all together in one solution?
+    </div>
+    <div class="answer">
+        Do not forget that your goal on CheckiO is to create a function.
+
+<pre class="brush: python">def correct_sentence(text: str) -> str:
+    text = text[0].upper() + text[1:]
+    if not text.endswith('.'):
+        text += '.'
+    
+    return text</pre>
+
+
+</div>
+</div>
+</body>

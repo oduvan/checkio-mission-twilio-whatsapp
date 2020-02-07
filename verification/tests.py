@@ -10,9 +10,43 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi'],
+            "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'hi friend'],
             "answer": {
-                'body': 'Hi',
+                'body': 'Hi friend.',
+                'from_': 'whatsapp:+15017122661',
+                'to': 'whatsapp:+15017122662'
+            }
+        },
+        {
+            "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi friend'],
+            "answer": {
+                'body': 'Hi friend.',
+                'from_': 'whatsapp:+15017122661',
+                'to': 'whatsapp:+15017122662'
+            }
+        },
+        {
+            "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi friend.'],
+            "answer": {
+                'body': 'Hi friend.',
+                'from_': 'whatsapp:+15017122661',
+                'to': 'whatsapp:+15017122662'
+            }
+        },
+    ],
+    "Extra": [
+        {
+            "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'hi'],
+            "answer": {
+                'body': 'Hi.',
+                'from_': 'whatsapp:+15017122661',
+                'to': 'whatsapp:+15017122662'
+            }
+        },
+        {
+            "input": ['whatsapp:+15017122661', 'whatsapp:+15017122662', 'welcome to New York'],
+            "answer": {
+                'body': 'Welcome to New York.',
                 'from_': 'whatsapp:+15017122661',
                 'to': 'whatsapp:+15017122662'
             }

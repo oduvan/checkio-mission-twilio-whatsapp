@@ -1,9 +1,11 @@
+from twilio.rest import Client
+
 # Your Account Sid and Auth Token from twilio.com/console
 ACCOUNT_SID = 'your_acount_sid'
 AUTH_TOKEN = 'your_auth_token'
 
 
-def send_message(from, to, body):
+def send_message(sender, to, body):
     """
         sends message
     """
